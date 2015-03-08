@@ -4,6 +4,7 @@ class CreateOrthodoxyRules < ActiveRecord::Migration
       t.string :field_name
       t.string :validator_class
       t.text :validator_options
+      t.belongs_to :rule_set
 
       t.timestamps null: false
     end

@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150308005918) do
     t.string   "field_name"
     t.string   "validator_class"
     t.text     "validator_options"
+    t.integer  "rule_set_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end

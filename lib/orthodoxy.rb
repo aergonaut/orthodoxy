@@ -1,4 +1,9 @@
 require "orthodoxy/engine"
 
 module Orthodoxy
+  mattr_accessor :rule_set_class
+
+  def self.rule_set_class
+    @@rule_set_class.constantize
+  end
 end
