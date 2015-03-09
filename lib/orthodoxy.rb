@@ -1,4 +1,5 @@
 require "orthodoxy/engine"
+require "orthodoxy/acts_as_rule_set"
 
 module Orthodoxy
   mattr_accessor :rule_set_class
