@@ -1,4 +1,4 @@
-# Orthodoxy
+# Orthodoxy [![Build Status](https://travis-ci.org/aergonaut/orthodoxy.svg?branch=master)](https://travis-ci.org/aergonaut/orthodoxy)
 
 **Orthodoxy** is a Rails plugin that allows you to give your users the ability to define their own custom validations on your models.
 
