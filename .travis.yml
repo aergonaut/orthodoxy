@@ -1,0 +1,10 @@
+---
+language: ruby
+rvm:
+  - 2.2.0
+  - 2.1.0
+  - 1.9.3
+before_script:
+  - 'bundle exec rake db:create --trace'
+  - 'bundle exec rake db:migrate --trace RAILS_ENV=test'
+script: 'bundle exec rspec spec'
