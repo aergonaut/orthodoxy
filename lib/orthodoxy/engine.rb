@@ -7,7 +7,7 @@ module Orthodoxy
     end
 
     initializer "orthodoxy.activerecord_extensions" do
-      ::ActiveRecord::Base.include Orthodoxy::HasCustomValidations
+      ::ActiveRecord::Base.send :include, Orthodoxy::HasCustomValidations
     end
   end
 end
