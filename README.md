@@ -10,6 +10,11 @@ Rails provides some utility for conditional validations by allowing you to pass 
 
 Orthodoxy provides a simple and generic solution for modeling validations in the form of Rules and RuleSets. Storing validations as separate records in your database allows your users to create validations through your application. Orthodoxy then matches Rules to your records and applies their validations.
 
+## Requirements
+
+* Rails 4.2
+* ActiveRecord
+
 ## Installation
 
 Add it to your Gemfile:

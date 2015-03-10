@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Orthodoxy::VERSION
   s.authors     = ["Chris Fung"]
   s.email       = ["aergonaut@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Orthodoxy."
-  s.description = "TODO: Description of Orthodoxy."
+  s.homepage    = "https://github.com/aergonaut/orthodoxy"
+  s.summary     = "A Rails plugin to provide dynamic custom validations."
+  s.description = "Orthodoxy is a Rails plugin that allows you to give your users the ability to define their own custom validations on your models."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
@@ -22,5 +22,4 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec-rails", "~> 3.2.1"
   s.add_development_dependency "factory_girl_rails", "~> 4.5.0"
   s.add_development_dependency "shoulda-matchers", "~> 2.8.0"
-  s.add_development_dependency "pry"
 end
