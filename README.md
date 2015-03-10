@@ -2,6 +2,14 @@
 
 **Orthodoxy** is a Rails plugin that allows you to give your users the ability to define their own custom validations on your models.
 
+Why would you want to do this? Perhaps your application is a generic CMS application. You provide generic Post and Page models that have various different attributes such as title, subtitle, snippet, content, etc. Your customers are news media organizations that want to run their news blogs using your CMS.
+
+There are some validations that you know all your customers will want, such as requiring a Post to have a title. But certain customers might have different requirements for different fields. Maybe some want to require a subtitle or snippet. Maybe some want the snippet to be short enough to fit into a tweet, but others don't care about the length.
+
+Rails provides some utility for conditional validations by allowing you to pass a lambda to a validation macro. But encoding these sorts of conditions where users can turn on or off validations can quickly become unmanageable. Furthermore, there's no clear way to allow your users to specify their own options to validations such as length.
+
+Orthodoxy provides a simple and generic solution for modeling validations in the form of Rules and RuleSets. Storing validations as separate records in your database allows your users to create validations through your application. Orthodoxy then matches Rules to your records and applies their validations.
+
 ## Installation
 
 Add it to your Gemfile:
@@ -67,6 +75,10 @@ end
 ```
 
 This will add a validation hook that will query your rule sets and apply the applicable rules to your model. That's it!
+
+## Integrating into your application
+
+Orthodoxy is agnostic to how you expose rules and rule sets to your users. It does not provide views or controllers for managing rules or rule sets. It is up to you to decide how best to do this.
 
 ## Contributing
 
