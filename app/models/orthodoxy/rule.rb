@@ -3,7 +3,7 @@ module Orthodoxy
     belongs_to :rule_set, class_name: Orthodoxy.rule_set_class.to_s
 
     validates :field_name, presence: true
-    validates :validator_class, presence: true
+    validates :validator_class, presence: true, inclusion: { in: Orthodoxy.validator_classes }
 
     serialize :validator_options, JSON
 

@@ -8,6 +8,7 @@ module Orthodoxy
     it { is_expected.to validate_presence_of :field_name }
     it { is_expected.to validate_presence_of :validator_class }
     it { is_expected.to serialize :validator_options }
+    it { is_expected.to validate_inclusion_of(:validator_class).in_array(Orthodoxy.validator_classes) }
 
     describe "#validate" do
       let(:record) { DummyRecord.new }
